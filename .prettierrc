@@ -1,5 +1,4 @@
 {
-  "plugins": ["prettier-plugin-apex", "@prettier/plugin-xml"],
   "printWidth": 120,
   "tabWidth": 2,
   "useTabs": false,
@@ -9,6 +8,7 @@
   "arrowParens": "always",
   "endOfLine": "lf",
   "apexInsertFinalNewline": false,
+  "plugins": ["prettier-plugin-apex", "@prettier/plugin-xml"],
   "overrides": [
     { "files": "**/lwc/**/*.html", "options": { "parser": "lwc" } },
     { "files": "*.{cmp,page,component}", "options": { "parser": "html" } }
