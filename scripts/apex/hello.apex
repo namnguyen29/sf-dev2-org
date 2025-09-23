@@ -1,8 +1,5 @@
-// Use .apex files to store anonymous Apex.
-// You can execute anonymous Apex in VS Code by selecting the
-//     apex text and running the command:
-//     SFDX: Execute Anonymous Apex with Currently Selected Text
-// You can also execute the entire file by running the command:
-//     SFDX: Execute Anonymous Apex with Editor Contents
+// Run Apex scripts here
 
-Database.executeBatch(new WellnessJourneyRewardsBatch(), 100);
+salesforceComThInvoiceWebService.project project = new salesforceComThInvoiceWebService.project();
+String username = project.username;
+System.debug('username--' + username);

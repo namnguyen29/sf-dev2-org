@@ -2,11 +2,15 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>AccessibilityProjectBilling</members>
+		<members>BillingServiceProxy</members>
+		<members>AsyncBillingServiceProxy</members>
 		<members>HttpStatusConstant</members>
 		<members>RewardsCalloutService</members>
 		<members>RewardsCalloutServiceMock</members>
 		<members>WellnessJourneyRewardsBatch</members>
 		<members>WellnessJourneyRewardsBatchTest</members>
+		<members>salesforceComThInvoiceWebService</members>
+		<members>AsyncSalesforceComThInvoiceWebService</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
