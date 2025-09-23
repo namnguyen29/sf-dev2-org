@@ -9,11 +9,6 @@ public class RewardsCalloutService {
 
     HttpResponse res = new Http().send(req);
 
-    System.debug('checkk jsonBody::' + jsonBody);
-    System.debug('checkk endpoint::' + endpoint);
-    System.debug('checkk res::' + res.getBody());
-    System.debug('checkk stt code::' + res.getStatusCode());
-
     if (res.getStatusCode() == HttpStatusConstant.CREATED) {
       return HttpStatusConstant.OK;
     }
