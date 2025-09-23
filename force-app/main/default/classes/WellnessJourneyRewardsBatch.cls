@@ -36,14 +36,11 @@ global class WellnessJourneyRewardsBatch implements Database.Batchable<SObject>,
 
         uniqueUserId.add(journey.OwnerId);
 
-        //Build JSON object
-
         userObj.put('userId', journey.OwnerId);
         userObj.put('fullName', journey.Owner.Name);
         userObj.put('email', journey.Owner.Email);
         userObj.put('username', journey.Owner.Username);
 
-        //Add to array
         usersListMap.add(userObj);
       }
     }
