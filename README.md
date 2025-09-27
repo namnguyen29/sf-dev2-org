@@ -12,7 +12,7 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 ## Org Credentials
 
-**Username:** `quocnam.dev2@gmail.com`  
+**Username:** `quocnam.dn29@playful-impala-mv5um5.com`  
 **Password:** `**********`
 
 > _Note: This org is for practice only. No real data will be pushed here._
