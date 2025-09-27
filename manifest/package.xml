@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>AccessibilityProjectBilling</members>
-		<members>BillingServiceProxy</members>
-		<members>BillingCalloutServiceTest</members>
-		<members>BillingCalloutServiceMock</members>
-		<members>HttpStatusConstant</members>
-		<members>RewardsCalloutService</members>
-		<members>RewardsCalloutServiceMock</members>
-		<members>WellnessJourneyRewardsBatch</members>
-		<members>WellnessJourneyRewardsBatchTest</members>
+		<members>ContactApi</members>
+		<members>ContactSelector</members>
 		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>WorkshopTrigger</members>
-		<name>ApexTrigger</name>
 	</types>
 	<version>64.0</version>
 </Package>
