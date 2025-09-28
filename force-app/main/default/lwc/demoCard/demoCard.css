@@ -1,0 +1,240 @@
+.portal {
+  font-family: 'Salesforce Sans', Arial, sans-serif;
+  color: var(--ghol-text);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: linear-gradient(90deg, var(--ghol-gradient-start), var(--ghol-primary));
+  color: var(--ghol-on-primary, white);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.title {
+  font-size: 1.15rem;
+}
+
+.btn {
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn.primary {
+  background: var(--ghol-surface);
+  color: var(--ghol-primary);
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+}
+.sidebar {
+  width: 260px;
+}
+.profile-card {
+  background: var(--ghol-surface);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ghol-avatar-bg);
+  color: var(--ghol-avatar-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.info .name {
+  font-weight: 700;
+}
+.info .meta {
+  font-size: 0.85rem;
+  color: var(--ghol-muted);
+}
+
+.nav {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.nav-item {
+  padding: 10px;
+  border-radius: 6px;
+  color: var(--ghol-nav-text);
+  cursor: pointer;
+}
+.nav-item.active {
+  background: var(--ghol-active-bg);
+  color: var(--ghol-avatar-color);
+  font-weight: 600;
+}
+
+.content {
+  flex: 1;
+}
+.patient-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--ghol-surface);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+.patient-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  background: var(--ghol-patient-avatar-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.patient-name {
+  margin: 0;
+}
+.patient-details {
+  color: var(--ghol-muted);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.card {
+  background: var(--ghol-surface);
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+.card-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.card-body {
+  color: var(--ghol-text-muted, #374151);
+}
+.small-list div {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--ghol-border);
+}
+.muted {
+  color: var(--ghol-muted);
+}
+
+/* Appointment overview specific styles (SLDS-inspired) */
+:host {
+  /* Inferred tokens (please replace with exact Figma variable names/values if you provide them) */
+  --ghol-surface: #ffffff;
+  --ghol-primary: #1e90ff;
+  --ghol-gradient-start: #2b6cb0;
+  --ghol-on-primary: #ffffff;
+  --ghol-text: #1b1b1b;
+  --ghol-text-muted: #374151;
+  --ghol-muted: #6b7280;
+  --ghol-border: #f3f4f6;
+  --ghol-spacing-sm: 8px;
+  --ghol-spacing-md: 16px;
+  --ghol-avatar-bg: #eef2ff;
+  --ghol-avatar-color: #1e3a8a;
+  --ghol-patient-avatar-bg: #f0f9ff;
+  --ghol-nav-text: #374151;
+  --ghol-active-bg: #eef2ff;
+}
+
+.slds-card.appt-card {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slds-card__header {
+  padding: var(--ghol-spacing-md);
+  background: linear-gradient(90deg, rgba(14, 90, 160, 0.06), rgba(30, 144, 255, 0.04));
+  align-items: center;
+}
+
+.slds-card__body {
+  padding: var(--ghol-spacing-sm) var(--ghol-spacing-md);
+}
+
+.appt-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.appt-item {
+  display: block;
+}
+
+.slds-media__figure .avatar-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ghol-primary);
+  color: white;
+  font-weight: 700;
+}
+
+.appt-meta {
+  min-width: 110px;
+}
+
+.slds-pill {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  margin-top: 6px;
+}
+.slds-pill_brand {
+  background: var(--ghol-primary);
+  color: white;
+}
+.slds-pill_outline-brand {
+  background: transparent;
+  border: 1px solid var(--ghol-primary);
+  color: var(--ghol-primary);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,6 +3,10 @@
 	<types>
 		<members>ContactApi</members>
 		<members>ContactSelector</members>
+		<members>ContactApiTest</members>
+		<members>GooglePlacesDTO</members>
+		<members>GooglePlacesService</members>
+		<members>HttpStatusConstant</members>
 		<name>ApexClass</name>
 	</types>
 	<version>64.0</version>

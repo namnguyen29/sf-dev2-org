@@ -1,0 +1,132 @@
+<template>
+  <div class="portal">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">GHOL</div>
+        <div class="title">Portail Patient</div>
+      </div>
+      <div class="header-actions">
+        <button class="btn primary">Nouveau rendez-vous</button>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar" aria-label="Patient sidebar">
+        <div class="profile-card">
+          <div class="avatar">{patientInitials}</div>
+          <div class="info">
+            <div class="name">{patient.name}</div>
+            <div class="meta">Né(e) : {patient.dob} · {patient.gender}</div>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="nav-item active">Résumé</a>
+          <a class="nav-item">Rendez-vous</a>
+          <a class="nav-item">Médication</a>
+          <a class="nav-item">Documents</a>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section class="summary">
+          <div class="patient-card">
+            <div class="patient-left">
+              <div class="patient-avatar">{patient.avatarEmoji}</div>
+            </div>
+            <div class="patient-right">
+              <h2 class="patient-name">{patient.name}</h2>
+              <div class="patient-details">{patient.address} · {patient.phone}</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cards-grid">
+          <!-- Appointments card using SLDS markup -->
+          <div class="slds-card appt-card">
+            <header class="slds-card__header slds-grid">
+              <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                  <span class="slds-icon_container slds-icon-standard-event" title="Appointment">
+                    <svg
+                      viewBox="0 0 52 52"
+                      class="slds-icon"
+                      aria-hidden="true"
+                      focusable="false"
+                      width="20"
+                      height="20"
+                    >
+                      <path
+                        d="M45 8h-3V4a1 1 0 0 0-2 0v4H12V4a1 1 0 0 0-2 0v4H7a3 3 0 0 0-3 3v34a3 3 0 0 0 3 3h38a3 3 0 0 0 3-3V11a3 3 0 0 0-3-3zM7 41V18h38v23H7z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div class="slds-media__body">
+                  <h2 class="slds-text-heading_small slds-truncate" title="Prochains rendez-vous">
+                    Prochains rendez-vous
+                  </h2>
+                </div>
+              </div>
+              <div class="slds-no-flex">
+                <button class="slds-button slds-button_neutral">Nouveau</button>
+              </div>
+            </header>
+
+            <div class="slds-card__body slds-p-horizontal_small">
+              <template if:true={hasAppointments}>
+                <ul class="slds-list_vertical slds-has-dividers_around-space appt-list">
+                  <template for:each={patient.appointments} for:item="appt">
+                    <li key={appt.id} class="slds-list__item appt-item slds-p-vertical_x-small">
+                      <div class="slds-grid slds-grid_align-spread slds-wrap">
+                        <div class="slds-media slds-media_center slds-m-right_medium slds-grow">
+                          <div class="slds-media__figure">
+                            <span class="avatar-circle">{appt.providerInitials}</span>
+                          </div>
+                          <div class="slds-media__body">
+                            <div class="slds-text-heading_small slds-truncate" title={appt.title}>{appt.title}</div>
+                            <div class="slds-text-body_small slds-text-color_weak">
+                              {appt.provider} · {appt.location}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="slds-text-align_right slds-shrink-none slds-m-top_xx-small appt-meta">
+                          <div class="slds-text-heading_small">{appt.time}</div>
+                          <div class="slds-text-body_small slds-text-color_weak">{appt.date}</div>
+                          <span class={appt.statusClass}>{appt.status}</span>
+                        </div>
+                      </div>
+                    </li>
+                  </template>
+                </ul>
+              </template>
+              <template if:false={hasAppointments}>
+                <div class="slds-text-body_regular">Aucun rendez-vous</div>
+              </template>
+            </div>
+          </div>
+
+          <!-- Other cards kept as before -->
+          <div class="card">
+            <div class="card-title">Dossiers</div>
+            <div class="card-body small-list">
+              <div>Rapports récents</div>
+              <div>Imagerie</div>
+              <div>Laboratoire</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Contact</div>
+            <div class="card-body">
+              <div>{patient.contactName}</div>
+              <div class="muted">{patient.contactPhone}</div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</template>
