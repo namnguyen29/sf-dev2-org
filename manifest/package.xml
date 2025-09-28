@@ -3,6 +3,9 @@
 	<types>
 		<members>ContactApi</members>
 		<members>ContactSelector</members>
+		<members>ContactApiTest</members>
+		<members>GooglePlacesMapper</members>
+		<members>GooglePlacesService</members>
 		<name>ApexClass</name>
 	</types>
 	<version>64.0</version>
